@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionSystem.Plugins", "InteractionSystem.Plugins.csproj", "{DDE838C2-9FD1-2250-C6C7-A1C21F398E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionSystem", "InteractionSystem.csproj", "{1D6CA3EE-3F0A-4559-B9D2-C2F0FA92506A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteractionSystem.Editor.Plugins", "InteractionSystem.Editor.Plugins.csproj", "{8ED04271-6327-AE15-B50C-16F964AACE9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDE838C2-9FD1-2250-C6C7-A1C21F398E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE838C2-9FD1-2250-C6C7-A1C21F398E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE838C2-9FD1-2250-C6C7-A1C21F398E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE838C2-9FD1-2250-C6C7-A1C21F398E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D6CA3EE-3F0A-4559-B9D2-C2F0FA92506A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D6CA3EE-3F0A-4559-B9D2-C2F0FA92506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D6CA3EE-3F0A-4559-B9D2-C2F0FA92506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D6CA3EE-3F0A-4559-B9D2-C2F0FA92506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED04271-6327-AE15-B50C-16F964AACE9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED04271-6327-AE15-B50C-16F964AACE9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED04271-6327-AE15-B50C-16F964AACE9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED04271-6327-AE15-B50C-16F964AACE9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

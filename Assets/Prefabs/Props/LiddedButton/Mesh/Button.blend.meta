@@ -1,0 +1,316 @@
+fileFormatVersion: 2
+guid: d2395d2cfeeae3346990f1218d99ea49
+timeCreated: 1508717530
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Cube
+    100004: Cube_001
+    100006: Liid
+    100008: Sphere
+    100010: Button
+    100012: Button_bottom
+    100014: Stand
+    100016: Armature
+    100018: Armature_001
+    100020: Bone
+    100022: Bone_0
+    100024: Button_0
+    100026: Lid
+    400000: //RootNode
+    400002: Cube
+    400004: Cube_001
+    400006: Liid
+    400008: Sphere
+    400010: Button
+    400012: Button_bottom
+    400014: Stand
+    400016: Armature
+    400018: Armature_001
+    400020: Bone
+    400022: Bone_0
+    400024: Button_0
+    400026: Lid
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Liid
+    2300006: Sphere
+    2300008: Button
+    2300010: Button_bottom
+    2300012: Stand
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Liid
+    3300006: Sphere
+    3300008: Button
+    3300010: Button_bottom
+    3300012: Stand
+    4300000: Cube_001
+    4300002: Cube
+    4300004: Sphere
+    4300006: Liid
+    4300008: Stand
+    4300010: Button_bottom
+    4300012: Button
+    7400000: Default Take
+    7400002: OpenLid
+    7400004: ButtonDownUp
+    7400006: OpenLidState
+    9500000: //RootNode
+    13700000: Button
+    13700002: Button_bottom
+    13700004: Liid
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blacxk
+    second: {fileID: 2100000, guid: 7d487b0df9c8864489bdf97392635e97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gray
+    second: {fileID: 2100000, guid: b3427e650daf0df438e04da21122044d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 8c7daeec77c4a2b43b6242161ee9a905, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 51045cd80751d15418670d754eebed61, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: OpenLidState
+      takeName: OpenLidState
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Button_0
+        weight: 0
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Lid
+        weight: 1
+      - path: Button
+        weight: 0
+      - path: Button_bottom
+        weight: 0
+      - path: Liid
+        weight: 0
+      - path: Stand
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ButtonDownUp
+      takeName: ButtonDownUp
+      firstFrame: -1
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.7658333
+        functionName: unTrigger
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 9f1bafac2ff311541929428e001fb4f9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Button_0
+        weight: 1
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Lid
+        weight: 1
+      - path: Button
+        weight: 0
+      - path: Button_bottom
+        weight: 0
+      - path: Liid
+        weight: 0
+      - path: Stand
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: OpenLid
+      takeName: OpenLid
+      firstFrame: -1
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.88887703
+        functionName: OpenLid
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 9f1bafac2ff311541929428e001fb4f9,
+          type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 0
+      - path: Armature/Button_0
+        weight: 0
+      - path: Armature_001
+        weight: 1
+      - path: Armature_001/Lid
+        weight: 1
+      - path: Button
+        weight: 0
+      - path: Button_bottom
+        weight: 0
+      - path: Liid
+        weight: 0
+      - path: Stand
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

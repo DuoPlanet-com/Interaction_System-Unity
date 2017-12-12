@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 9391c6844c72bbb47999c61d3bf386f8
+timeCreated: 1509395905
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Cube_000
+    100002: Cube_001
+    100004: Cylinder
+    100006: Cylinder_001
+    100008: //RootNode
+    100010: Plane
+    100012: Plane_001
+    100014: Cube
+    100016: CoverBack
+    100018: CoverFront
+    100020: Door
+    100022: HandleBack
+    100024: HandleFront
+    100026: KeyHoleback
+    100028: KeyHoleFront
+    400000: Cube_000
+    400002: Cube_001
+    400004: Cylinder
+    400006: Cylinder_001
+    400008: //RootNode
+    400010: Plane
+    400012: Plane_001
+    400014: Cube
+    400016: CoverBack
+    400018: CoverFront
+    400020: Door
+    400022: HandleBack
+    400024: HandleFront
+    400026: KeyHoleback
+    400028: KeyHoleFront
+    2300000: Cube_000
+    2300002: Cube_001
+    2300004: Cylinder
+    2300006: Cylinder_001
+    2300008: Plane
+    2300010: Plane_001
+    2300012: Cube
+    2300014: CoverBack
+    2300016: CoverFront
+    2300018: Door
+    2300020: HandleBack
+    2300022: HandleFront
+    2300024: KeyHoleback
+    2300026: KeyHoleFront
+    3300000: Cube_000
+    3300002: Cube_001
+    3300004: Cylinder
+    3300006: Cylinder_001
+    3300008: Plane
+    3300010: Plane_001
+    3300012: Cube
+    3300014: CoverBack
+    3300016: CoverFront
+    3300018: Door
+    3300020: HandleBack
+    3300022: HandleFront
+    3300024: KeyHoleback
+    3300026: KeyHoleFront
+    4300000: Cylinder_001
+    4300002: Plane_001
+    4300004: Cube_000
+    4300006: Cylinder
+    4300008: Cube_001
+    4300010: Plane
+    4300012: Cube
+    4300014: Door
+    4300016: HandleBack
+    4300018: KeyHoleback
+    4300020: CoverBack
+    4300022: HandleFront
+    4300024: CoverFront
+    4300026: KeyHoleFront
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door
+    second: {fileID: 2100000, guid: b0001915ddb64ef4a8ea836c312f866c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorCover
+    second: {fileID: 2100000, guid: 189f1731cc6b71946b7a6005e08eb9f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle
+    second: {fileID: 2100000, guid: bb1152440ed183849819f56671ed2b8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Keykole
+    second: {fileID: 2100000, guid: fc0f74c3863986a43bad819f7648d823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 46c9d697d14ae784b82f8f359829650e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
