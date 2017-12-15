@@ -6,37 +6,57 @@ namespace Abstracts {
     [RequireComponent(typeof(Collider))]
     public abstract class Interactable : MonoBehaviour {
 
-        [Header("Interaction settings")]
-        [Tooltip("Within what range should the player be able to interact with this object?")]
-        public float interactionRange = 5;
-        public float cooldown = 0;
-        public bool oneTime = false;
-        public bool startUnlocked = true;
+        
 
-        [Tooltip("Used for debugging purposes")]
-        public bool printDistance = false;
+        [System.Serializable]
+        public class InteractionSettingsContainer
+        {
+            [Tooltip("Within what range should the player be able to interact with this object?")]
+            public float interactionRange = 5;
+
+            [Space(7)]
+            public float cooldown = 0;
+
+            [Space(7)]
+            public bool oneTime = false;
+            public bool startUnlocked = true;
+
+            [Space(7)]
+            [Tooltip("Used for debugging purposes")]
+            public bool printDistance = false;
+        }
+        public InteractionSettingsContainer interactionSettings = new InteractionSettingsContainer();
+
+
+        [System.Serializable]
+        public class AudioSettingsContainer
+        {
+            public AudioClip interactionSound;
+            public float interactionSoundVolume = 1;
+            public AudioClip watchSound;
+            public float watchSoundVolume = 1;
+            public AudioClip touchSound;
+            public float touchSoundVolume = 1;
+            [Space(10)]
+
+            public AudioClip lockedSound;
+            public float lockedVolume = 1;
+        }
+        public AudioSettingsContainer audioSettings = new AudioSettingsContainer();
+
+        [System.Serializable]
+        protected class InternalsContainer
+        {
+            public bool doneTime = false;
+
+            public bool isInteractable;
+
+            public float cooldownTimer;
+        }
 
         [Space(10)]
-        public AudioClip interactionSound;
-        public float interactionSoundVolume = 1;
-        public AudioClip watchSound;
-        public float watchSoundVolume = 1;
-        public AudioClip touchSound;
-        public float touchSoundVolume = 1;
-        [Space(5)]
-        public AudioClip lockedSound;
-        public float lockedVolume = 1;
-
-
-        [Header("Interaction internals")]
         [SerializeField]
-        bool doneTime = false;
-
-        [SerializeField]
-        bool isInteractable;
-
-        [SerializeField]
-        float cooldownTimer;
+        protected InternalsContainer internals = new InternalsContainer();
 
         public enum ActivationMethod
         {
@@ -51,14 +71,14 @@ namespace Abstracts {
             //}
             RequisiteCheck();
 
-            if (startUnlocked)
+            if (interactionSettings.startUnlocked)
             {
-                isInteractable = true;
+                internals.isInteractable = true;
             } else
             {
-                isInteractable = false;
+                internals.isInteractable = false;
             }
-            cooldownTimer = cooldown;
+            internals.cooldownTimer = interactionSettings.cooldown;
             OnStart();
         }
 
@@ -75,14 +95,14 @@ namespace Abstracts {
         public bool IsWithinRange(GameObject interactor)
         {
 
-            if (cooldownTimer <= 0 && !(!doneTime && oneTime))
+            if (internals.cooldownTimer <= 0 && !(!internals.doneTime && interactionSettings.oneTime))
             {
                 float distance = Vector3.Distance(interactor.transform.position, transform.position);
-                if (printDistance)
+                if (interactionSettings.printDistance)
                 {
                     print(distance);
                 }
-                if (Vector3.Distance(interactor.transform.position, transform.position) <= interactionRange)
+                if (Vector3.Distance(interactor.transform.position, transform.position) <= interactionSettings.interactionRange)
                 {
                     return true;
                 }
@@ -97,7 +117,7 @@ namespace Abstracts {
 
         public virtual void OnUpdate()
         {
-            cooldownTimer -= Time.deltaTime;
+            internals.cooldownTimer -= Time.deltaTime;
         }
 
         public virtual void OnFixedUpdate()
@@ -108,9 +128,9 @@ namespace Abstracts {
         public virtual void OnWatchEnter()
         {
           
-            if (watchSound != null)
+            if (audioSettings.watchSound != null)
             {
-                AudioSource.PlayClipAtPoint(watchSound, transform.position, watchSoundVolume);
+                AudioSource.PlayClipAtPoint(audioSettings.watchSound, transform.position, audioSettings.watchSoundVolume);
             }
         }
 
@@ -127,17 +147,17 @@ namespace Abstracts {
         public virtual void OnInteractionEnter()
         {
 
-            if (isInteractable == false)
+            if (internals.isInteractable == false)
             {
-                AudioSource.PlayClipAtPoint(lockedSound, transform.position, lockedVolume);
+                AudioSource.PlayClipAtPoint(audioSettings.lockedSound, transform.position, audioSettings.lockedVolume);
             }
             else
-            { 
-                cooldownTimer = cooldown;
-                doneTime = true;
-                if (interactionSound != null)
+            {
+                internals.cooldownTimer = interactionSettings.cooldown;
+                internals.doneTime = true;
+                if (audioSettings.interactionSound != null)
                 {
-                    AudioSource.PlayClipAtPoint(interactionSound, transform.position,interactionSoundVolume);
+                    AudioSource.PlayClipAtPoint(audioSettings.interactionSound, transform.position, audioSettings.interactionSoundVolume);
                 }
             }
         }
@@ -155,9 +175,9 @@ namespace Abstracts {
         public virtual void OnTouchEnter(Collision interactorCollision, GameObject interactor)
         {
 
-            if (touchSound != null)
+            if (audioSettings.touchSound != null)
             {
-                AudioSource.PlayClipAtPoint(touchSound, transform.position, touchSoundVolume);
+                AudioSource.PlayClipAtPoint(audioSettings.touchSound, transform.position, audioSettings.touchSoundVolume);
             }
         }
 
@@ -174,9 +194,9 @@ namespace Abstracts {
         public virtual void OnTouchTriggerEnter(Collider other, GameObject interactor)
         {
             
-            if (touchSound != null)
+            if (audioSettings.touchSound != null)
             {
-                AudioSource.PlayClipAtPoint(touchSound, transform.position, touchSoundVolume);
+                AudioSource.PlayClipAtPoint(audioSettings.touchSound, transform.position, audioSettings.touchSoundVolume);
             }
         }
 
@@ -193,11 +213,11 @@ namespace Abstracts {
 
         public void SetInteractable(bool status)
         {
-            isInteractable = status;
+            internals.isInteractable = status;
         }
 
         public bool IsInteractable() {
-            return isInteractable;
+            return internals.isInteractable;
         }
 
         bool RequisiteCheck()

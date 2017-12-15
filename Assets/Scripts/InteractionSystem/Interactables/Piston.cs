@@ -26,15 +26,19 @@ namespace Interactables {
 
         public ActivationMethod activateBy = ActivationMethod.INTERACT;
 
-        [Header("Piston internals")]
+        [System.Serializable]
+        private class PistonInternalsContainer
+        {
+            public bool isUp;
+            public bool isDown;
+            public float upDistance;
+            public float downDistance;
+        }
+
         [SerializeField]
-        bool isUp;
-        [SerializeField]
-        bool isDown;
-        [SerializeField]
-        float upDistance;
-        [SerializeField]
-        float downDistance;
+        private PistonInternalsContainer pistonInternals = new PistonInternalsContainer();
+
+        
 
         Vector3 upPos;
         Vector3 downPos;
@@ -129,22 +133,22 @@ namespace Interactables {
 
         public bool IsUp()
         {
-            return isUp;
+            return pistonInternals.isUp;
         }
 
         public bool IsDown()
         {
-            return isDown;
+            return pistonInternals.isDown;
         }
 
         public float DownDistance()
         {
-            return downDistance;
+            return pistonInternals.downDistance;
         }
 
         public float UpDistance()
         {
-            return upDistance;
+            return pistonInternals.upDistance;
         }
 
 
@@ -174,18 +178,18 @@ namespace Interactables {
         
         void CheckPosition()
         {
-            upDistance = Vector3.Distance(piston.position, upPos);
-            downDistance = Vector3.Distance(piston.position, downPos);
+            pistonInternals.upDistance = Vector3.Distance(piston.position, upPos);
+            pistonInternals.downDistance = Vector3.Distance(piston.position, downPos);
             
-            if (upDistance <= upDownSensitivity)
-                isUp = true;
+            if (pistonInternals.upDistance <= upDownSensitivity)
+                pistonInternals.isUp = true;
             else
-                isUp = false;
+                pistonInternals.isUp = false;
 
-            if (downDistance <= upDownSensitivity)
-                isDown = true;
+            if (pistonInternals.downDistance <= upDownSensitivity)
+                pistonInternals.isDown = true;
             else
-                isDown = false;
+                pistonInternals.isDown = false;
         }
 
     }
